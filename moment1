@@ -1,0 +1,98 @@
+
+Proceso Tareas
+    Definir tarea1, tarea2, tarea3 Como Cadena
+    Definir estado1, estado2, estado3 Como Cadena
+    Definir opcion, seleccion Como Entero
+	
+    tarea1 <- ""
+    tarea2 <- ""
+    tarea3 <- ""
+    estado1 <- ""
+    estado2 <- ""
+    estado3 <- ""
+	
+    Repetir
+        Escribir "Menu de tareas"
+        Escribir "1. Crear tareas"
+        Escribir "2. Ver tareas"
+        Escribir "3. Cambiar estado de una tarea"
+        Escribir "4. Salir"
+        Escribir "Seleccione una opcion:"
+        Leer opcion
+		
+        Segun opcion Hacer
+            1:
+                Escribir "Ingrese la tarea 1:"
+                Leer tarea1
+                estado1 <- "Pendiente"
+				
+                Escribir "Ingrese la tarea 2:"
+                Leer tarea2
+                estado2 <- "Pendiente"
+				
+                Escribir "Ingrese la tarea 3:"
+                Leer tarea3
+                estado3 <- "Pendiente"
+				
+            2:
+                Escribir "Tarea 1: ", tarea1, " [", estado1, "]"
+                Escribir "Tarea 2: ", tarea2, " [", estado2, "]"
+                Escribir "Tarea 3: ", tarea3, " [", estado3, "]"
+				
+            3:
+                Escribir "¿Qué tarea desea modificar?"
+				Escribir "1, 2 o 3"
+                Leer seleccion
+				
+                Segun seleccion Hacer
+                    1:
+                        Escribir "Estado para tarea 1:"
+                        Escribir "1. Pendiente"
+                        Escribir "2. En Proceso"
+                        Escribir "3. Completada"
+                        Escribir "4. Cancelada"
+                        Leer opcion
+                        Segun opcion Hacer
+                            1: estado1 <- "Pendiente"
+                            2: estado1 <- "En Proceso"
+                            3: estado1 <- "Completada"
+                            4: estado1 <- "Cancelada"
+                        FinSegun
+                    2:
+                        Escribir "Estado para tarea 2:"
+                        Escribir "1. Pendiente"
+                        Escribir "2. En Proceso"
+                        Escribir "3. Completada"
+                        Escribir "4. Cancelada"
+                        Leer opcion
+                        Segun opcion Hacer
+                            1: estado2 <- "Pendiente"
+                            2: estado2 <- "En Proceso"
+                            3: estado2 <- "Completada"
+                            4: estado2 <- "Cancelada"
+                        FinSegun
+                    3:
+                        Escribir "Estado para tarea 3:"
+                        Escribir "1. Pendiente"
+                        Escribir "2. En Proceso"
+                        Escribir "3. Completada"
+                        Escribir "4. Cancelada"
+                        Leer opcion
+                        Segun opcion Hacer
+                            1: estado3 <- "Pendiente"
+                            2: estado3 <- "En Proceso"
+                            3: estado3 <- "Completada"
+                            4: estado3 <- "Cancelada"
+                        FinSegun
+                    De Otro Modo:
+                        Escribir "Escogiste mal."
+                FinSegun
+				
+            4:
+                Escribir "Saliend..."
+				
+            De Otro Modo:
+                Escribir "Escogiste mal."
+        FinSegun
+    Hasta Que opcion = 4
+FinProceso
